@@ -318,6 +318,7 @@
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(129, 22);
             this.PrecioTextBox.TabIndex = 60;
+            this.PrecioTextBox.TextChanged += new System.EventHandler(this.PrecioTextBox_TextChanged);
             // 
             // CantidadTextBox
             // 
@@ -325,6 +326,7 @@
             this.CantidadTextBox.Name = "CantidadTextBox";
             this.CantidadTextBox.Size = new System.Drawing.Size(129, 22);
             this.CantidadTextBox.TabIndex = 59;
+            this.CantidadTextBox.TextChanged += new System.EventHandler(this.CantidadTextBox_TextChanged);
             // 
             // CategoriaComboBox
             // 

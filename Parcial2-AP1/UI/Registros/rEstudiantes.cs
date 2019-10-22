@@ -107,6 +107,8 @@ namespace Parcial2_AP1.UI.Registros
             {
                 CategoriaComboBox.Items.Add(item.Descripcion);
             }
+
+            TotalTextBox.Text = "0.00";
         }
 
         private void NuevoButton_Click(object sender, EventArgs e)
@@ -117,6 +119,7 @@ namespace Parcial2_AP1.UI.Registros
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Estudiantes> Metodos = new RepositorioBase<Estudiantes>();
+            EstudiantesBLL Metodos2 = new EstudiantesBLL();
             Estudiantes estudiante;
             bool paso = false;
 
@@ -135,7 +138,7 @@ namespace Parcial2_AP1.UI.Registros
                     return;
                 }
 
-                paso = EstudiantesBLL.Modificar(estudiante);
+                paso = Metodos2.Modificar(estudiante);
             }
 
             if (paso)
@@ -209,6 +212,45 @@ namespace Parcial2_AP1.UI.Registros
 
             return paso;
         }
+
+        private void CantidadTextBox_TextChanged(object sender, EventArgs e)
+        {
+            int cantidad = 1;
+            decimal precio = 1;
+
+            if (!string.IsNullOrWhiteSpace(CantidadTextBox.Text))
+            {
+                cantidad = Convert.ToInt32(CantidadTextBox.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(PrecioTextBox.Text))
+            {
+                precio = Convert.ToDecimal(PrecioTextBox.Text);
+            }
+
+            decimal importe = cantidad * precio;
+
+            ImporteTextBox.Text = Convert.ToString(importe);
+        }
+
+        private void PrecioTextBox_TextChanged(object sender, EventArgs e)
+        {
+            int cantidad = 1;
+            decimal precio = 1;
+
+            if (!string.IsNullOrWhiteSpace(CantidadTextBox.Text))
+            {
+                cantidad = Convert.ToInt32(CantidadTextBox.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(PrecioTextBox.Text))
+            {
+                precio = Convert.ToDecimal(PrecioTextBox.Text);
+            }
+
+            decimal importe = cantidad * precio;
+
+            ImporteTextBox.Text = Convert.ToString(importe);
+        }
+
         private void AgregarDetalleButton_Click(object sender, EventArgs e)
         {
             if (DetalleDataGridView.DataSource != null)
@@ -227,12 +269,13 @@ namespace Parcial2_AP1.UI.Registros
                     )
                 );           
             CargarGrid();
+        
+            TotalTextBox.Text = Convert.ToString(Convert.ToDecimal(TotalTextBox.Text) + Convert.ToDecimal(ImporteTextBox.Text));
             CategoriaComboBox.Focus();
             CategoriaComboBox.Text = string.Empty;
-            TotalTextBox.Text = Convert.ToString(CategoriasDetalleBLL.CalcularTotal());
-
             CantidadTextBox.Text = string.Empty;
             PrecioTextBox.Text = string.Empty;
+            ImporteTextBox.Text = string.Empty;
         }
 
         private void RemoverButton_Click(object sender, EventArgs e)

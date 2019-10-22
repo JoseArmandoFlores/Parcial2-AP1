@@ -169,7 +169,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ConsultaDataGridView);
             this.Name = "cEstudiantes";
-            this.Text = "c";
+            this.Text = "Consulta de estudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

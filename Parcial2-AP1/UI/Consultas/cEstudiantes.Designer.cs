@@ -1,6 +1,6 @@
 ﻿namespace Parcial2_AP1.UI.Consultas
 {
-    partial class c
+    partial class cEstudiantes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.ConsultaDataGridView = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,18 +38,18 @@
             this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.CriterioTextBox = new System.Windows.Forms.TextBox();
             this.ConsultarButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataGridView
+            // ConsultaDataGridView
             // 
-            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView.Location = new System.Drawing.Point(12, 99);
-            this.DataGridView.Name = "DataGridView";
-            this.DataGridView.RowHeadersWidth = 51;
-            this.DataGridView.RowTemplate.Height = 24;
-            this.DataGridView.Size = new System.Drawing.Size(1069, 468);
-            this.DataGridView.TabIndex = 53;
+            this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConsultaDataGridView.Location = new System.Drawing.Point(12, 99);
+            this.ConsultaDataGridView.Name = "ConsultaDataGridView";
+            this.ConsultaDataGridView.RowHeadersWidth = 51;
+            this.ConsultaDataGridView.RowTemplate.Height = 24;
+            this.ConsultaDataGridView.Size = new System.Drawing.Size(1069, 468);
+            this.ConsultaDataGridView.TabIndex = 53;
             // 
             // label8
             // 
@@ -114,6 +114,11 @@
             // FiltroComboBox
             // 
             this.FiltroComboBox.FormattingEnabled = true;
+            this.FiltroComboBox.Items.AddRange(new object[] {
+            "Todo",
+            "ID",
+            "Nombre",
+            "Total"});
             this.FiltroComboBox.Location = new System.Drawing.Point(342, 52);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(188, 24);
@@ -146,8 +151,9 @@
             this.ConsultarButton.Text = "Consultar";
             this.ConsultarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConsultarButton.UseVisualStyleBackColor = false;
+            this.ConsultarButton.Click += new System.EventHandler(this.ConsultarButton_Click);
             // 
-            // c
+            // cEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,10 +167,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.DataGridView);
-            this.Name = "c";
+            this.Controls.Add(this.ConsultaDataGridView);
+            this.Name = "cEstudiantes";
             this.Text = "c";
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,7 +178,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DataGridView;
+        private System.Windows.Forms.DataGridView ConsultaDataGridView;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

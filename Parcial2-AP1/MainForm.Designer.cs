@@ -30,9 +30,9 @@
         {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -58,14 +58,6 @@
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.registrosToolStripMenuItem.Text = "Registros";
             // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xToolStripMenuItem1});
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            // 
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
@@ -77,14 +69,22 @@
             // 
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
             this.xToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.xToolStripMenuItem.Text = "X";
+            this.xToolStripMenuItem.Text = "Estudiantes";
             this.xToolStripMenuItem.Click += new System.EventHandler(this.XToolStripMenuItem_Click);
+            // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xToolStripMenuItem1});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // xToolStripMenuItem1
             // 
             this.xToolStripMenuItem1.Name = "xToolStripMenuItem1";
             this.xToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.xToolStripMenuItem1.Text = "X";
+            this.xToolStripMenuItem1.Text = "Estudiantes";
             this.xToolStripMenuItem1.Click += new System.EventHandler(this.XToolStripMenuItem1_Click);
             // 
             // MainForm

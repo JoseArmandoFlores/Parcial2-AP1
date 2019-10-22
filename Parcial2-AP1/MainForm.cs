@@ -21,14 +21,14 @@ namespace Parcial2_AP1
 
         private void XToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            r x = new r();
+            rEstudiantes x = new rEstudiantes();
             x.MdiParent = this;
             x.Show();
         }
 
         private void XToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            c x = new c();
+            cEstudiantes x = new cEstudiantes();
             x.MdiParent = this;
             x.Show();
         }
